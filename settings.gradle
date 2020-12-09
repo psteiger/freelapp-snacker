@@ -1,3 +1,4 @@
 rootProject.name = "freelapp-snacker"
 include ':domain'
 include ':android-impl'
+include ':android-factory'
