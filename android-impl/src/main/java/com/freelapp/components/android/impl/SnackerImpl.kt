@@ -7,13 +7,13 @@ import com.google.android.material.snackbar.Snackbar
 
 class SnackerImpl(private val activity: Activity) : Snacker {
 
-    override fun showSnackBar(message: String) {
+    override fun invoke(message: String) {
         showSnackBar(message, Snackbar.LENGTH_LONG, "OK") {
             snackBar?.dismiss()
         }
     }
 
-    override fun showSnackBar(messageStringResId: Int) {
+    override fun invoke(messageStringResId: Int) {
         showSnackBar(messageStringResId, Snackbar.LENGTH_LONG, "OK") {
             snackBar?.dismiss()
         }
