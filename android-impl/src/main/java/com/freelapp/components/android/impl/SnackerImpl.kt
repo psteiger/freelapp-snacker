@@ -4,8 +4,9 @@ import android.app.Activity
 import android.view.View
 import com.freelapp.components.snacker.domain.Snacker
 import com.google.android.material.snackbar.Snackbar
+import javax.inject.Inject
 
-class SnackerImpl(private val activity: Activity) : Snacker {
+class SnackerImpl @Inject constructor(private val activity: Activity) : Snacker {
 
     override fun invoke(message: String) {
         showSnackBar(message, Snackbar.LENGTH_LONG, "OK") {
