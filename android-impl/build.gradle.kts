@@ -28,7 +28,7 @@ afterEvaluate {
             // Creates a Maven publication called "release".
             create<MavenPublication>("release") {
                 from(components.getByName("release"))
-                artifactId = "$project.name"
+                artifactId = project.name
             }
         }
     }
