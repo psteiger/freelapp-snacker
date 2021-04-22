@@ -4,6 +4,7 @@
     <bytecodeTargetLevel target="1.8">
       <module name="freelapp-snacker.android-factory" target="11" />
       <module name="freelapp-snacker.android-impl" target="11" />
+      <module name="freelapp-snacker.buildSrc" target="11" />
       <module name="freelapp-snacker.snacker.android-impl" target="11" />
     </bytecodeTargetLevel>
   </component>

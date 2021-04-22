@@ -1,7 +1,7 @@
 plugins {
-    id 'java-library'
-    id 'kotlin'
-    id 'maven-publish'
+    `java-library`
+    id("kotlin")
+    `maven-publish`
 }
 
 java {
@@ -13,8 +13,8 @@ afterEvaluate {
     publishing {
         publications {
             // Creates a Maven publication called "release".
-            release(MavenPublication) {
-                from components.java
+            create<MavenPublication>("release") {
+                from(components.getByName("java"))
                 artifactId = "$project.name"
             }
         }
@@ -22,5 +22,5 @@ afterEvaluate {
 }
 
 dependencies {
-    implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+    implementation("org.jetbrains.kotlin:kotlin-stdlib:${Kotlin.version}")
 }
